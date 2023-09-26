@@ -11,9 +11,10 @@ class Controller {
     }
 
     $(window).on("KicsiNagy", (event) => {
-     // console.log(event.detail)
-      nagykepVIEW.nagyKepCsere(MODEL.getKisKepek(event.detail));
+     console.log(event.detail)
+      nagykepVIEW.nagyKepCsere(event.detail);
     });
+
     $(window).on("jobb", () => {
       MODEL.jobb();
       nagykepVIEW.nagyKepCsere(MODEL.getAktkep());
