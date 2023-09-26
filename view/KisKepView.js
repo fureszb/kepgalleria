@@ -8,7 +8,7 @@ class KisKepView {
     this.kicsikep = $(".Pimg:last-child");
     this.kicsikep.on("click", () => {
       this.eleres = this.kicsikep.children('img').attr('src');
-      this.#sajatEsemenyKezelo("KicsiNagy")
+      this.#sajatEsemenyKezelo("KicsiNagyCsere")
   
     });
 

@@ -10,7 +10,7 @@ class Controller {
         new KisKepView(MODEL.getKisKepek(index), $(".kiskep"));
     }
 
-    $(window).on("KicsiNagy", (event) => {
+    $(window).on("KicsiNagyCsere", (event) => {
      console.log(event.detail)
       nagykepVIEW.nagyKepCsere(event.detail);
     });
