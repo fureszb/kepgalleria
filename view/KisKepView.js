@@ -1,6 +1,8 @@
 class KisKepView {
   #kep;
-  constructor(kep, szuloElem) {
+  #index;
+  constructor(kep, szuloElem, index) {
+    this.#index = index;
     this.#kep = kep;
     this.szuloElem = szuloElem;
     this.#htmlEgyKep();
@@ -15,7 +17,7 @@ class KisKepView {
   }
   #sajatEsemenyKezelo(esemenyNev) {
 
-    const esemenyem = new CustomEvent(esemenyNev, {detail:this.eleres});
+    const esemenyem = new CustomEvent(esemenyNev, { detail: { eleres: this.eleres, index: this.#index } });
     window.dispatchEvent(esemenyem);
 
 
@@ -24,7 +26,7 @@ class KisKepView {
     let txt = "";
     txt += `
           <div class="Pimg card-body text-center">
-          <img src="${this.#kep
+          <img id="${this.#index}" src="${this.#kep
       }" class="img-thumbnail" alt="Cinque Terre">
           </div>
         `;

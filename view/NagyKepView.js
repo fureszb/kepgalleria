@@ -8,6 +8,11 @@ class NagyKep {
     this.balGomb = $("#bal");
     this.negyKepHely = $("#nagyKepHelye");
 
+    this.felirat= $(".card-footer").children("p");
+
+    this.cim= $(".card-header").children("h1");
+
+    console.log(this.felirat.text())
     this.jobbGomb.on("click", () => {
       this.#sajatEsemenyKezelo("jobb");
     });
@@ -23,10 +28,17 @@ class NagyKep {
   nagyKepCsere(kep) {
     this.negyKepHely.attr("src", kep);
   }
+  feliratCsere(felirat){
+    this.felirat.text(`${felirat}`);
+  }
+  cimCsere(cim){
+    this.cim.text(`${cim}`);
+  }
+
   #htmlOsszerak() {
     let txt = "";
     txt += `<div class="card">
-        <div class="card-header">Főkép</div>
+        <div class="card-header"><h1>Főcím</h1></div>
         <div class="card-body text-center">
         <button type="button" class="btn btn-primary" id="bal">Bal</button>
         <img id="nagyKepHelye"src="${
@@ -34,7 +46,7 @@ class NagyKep {
         }" class="img-thumbnail" alt="Cinque Terre">
         <button type="button" class="btn btn-primary" id="jobb">Jobb</button>
         </div>
-        <div class="card-footer">Leírás</div>
+        <div class="card-footer"><p>Leírás</p></div>
       </div>`;
     this.szuloElem.html(txt);
   }

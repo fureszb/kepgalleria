@@ -10,7 +10,7 @@ class Model {
     return this.#lista;
   }
   getAktkep() {
-    return this.#lista[this.#id].eleres;
+    return this.#lista[this.#id];
   }
   getKisKepek(index){
     return this.#lista[index].eleres;
