@@ -10,7 +10,10 @@ class Model {
     return this.#lista;
   }
   getAktkep() {
-    return this.#lista[this.#id];
+    return this.#lista[this.#id].eleres;
+  }
+  getKisKepek(index){
+    return this.#lista[index].eleres;
   }
   jobb() {
     if (++this.#id >= this.#lista.length) {
