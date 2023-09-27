@@ -1,17 +1,43 @@
 .nagykep .card-body {
   display: grid;
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 80px 1fr 80px;
 }
-.nagykep .card-body > img {
+
+.nagykep .card-body>img {
   margin: auto;
 }
+
 .kiskep {
   display: grid;
   grid-template-columns: repeat(4, 10%);
   gap: 5%;
   justify-content: center;
-  margin: 10px;
+  padding: 10px;
 }
-.kiskep img{
+
+.kiskep img {
   width: 100%;
+}
+
+main {
+  margin-top: 30px;
+}
+
+article {
+  border-radius: 17px;
+  box-shadow: -1px 3px 20px 16px #8080806b;
+}
+
+.Pimg {
+  border: 1px solid #00000057;
+  border-radius: 3px;
+}
+.Pimg:hover{
+  background-color: red;
+}
+.card-body>button{
+  font-size: 60px;
+}
+.card-body>button:hover{
+  color:#c5d8da;
 }

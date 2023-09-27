@@ -7,7 +7,7 @@ class Controller {
     const nagykepVIEW = new NagyKep(MODEL.getAktkep().eleres, $(".nagykep"));
 
     nagykepVIEW.feliratCsere(MODEL.getAktkep().leiras);
-    nagykepVIEW.cimCsere(MODEL.getAktkep().leiras);
+    nagykepVIEW.cimCsere(MODEL.getAktkep().cim);
 
     for (let index = 0; index < MODEL.getList().length; index++) {
       new KisKepView(MODEL.getKisKepek(index), $(".kiskep"), index);
@@ -31,14 +31,14 @@ class Controller {
       MODEL.jobb();
       nagykepVIEW.nagyKepCsere(MODEL.getAktkep().eleres);
       nagykepVIEW.feliratCsere(MODEL.getAktkep().leiras);
-      nagykepVIEW.cimCsere(MODEL.getAktkep().leiras);
+      nagykepVIEW.cimCsere(MODEL.getAktkep().cim);
     });
 
     $(window).on("bal", () => {
       MODEL.bal();
       nagykepVIEW.nagyKepCsere(MODEL.getAktkep().eleres);
       nagykepVIEW.feliratCsere(MODEL.getAktkep().leiras);
-      nagykepVIEW.cimCsere(MODEL.getAktkep().leiras);
+      nagykepVIEW.cimCsere(MODEL.getAktkep().cim);
     });
   }
 }

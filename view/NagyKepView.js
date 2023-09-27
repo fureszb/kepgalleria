@@ -38,13 +38,13 @@ class NagyKep {
   #htmlOsszerak() {
     let txt = "";
     txt += `<div class="card">
-        <div class="card-header"><h1>Főcím</h1></div>
+        <div class="card-header text-center"><h1>Főcím</h1></div>
         <div class="card-body text-center">
-        <button type="button" class="btn btn-primary" id="bal">Bal</button>
+        <button type="button" class="btn btn-primary" id="bal">←</button>
         <img id="nagyKepHelye"src="${
           this.#kep
         }" class="img-thumbnail" alt="Cinque Terre">
-        <button type="button" class="btn btn-primary" id="jobb">Jobb</button>
+        <button type="button" class="btn btn-primary" id="jobb">→</button>
         </div>
         <div class="card-footer"><p>Leírás</p></div>
       </div>`;
